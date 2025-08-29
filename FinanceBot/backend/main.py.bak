@@ -1,0 +1,22 @@
+import sys
+import os
+
+# اضافه کردن مسیر ریشه پروژه به sys.path برای جلوگیری از ModuleNotFoundError
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+if ROOT_DIR not in sys.path:
+    sys.path.append(ROOT_DIR)
+
+from backend.api import prices, transactions  # مثال import ها
+from backend.db.database import create_session, engine  # فرض: database.py توی backend هست
+
+from fastapi import FastAPI
+import uvicorn
+
+app = FastAPI()
+
+# اضافه کردن روت‌ها
+app.include_router(prices.router)
+app.include_router(transactions.router)
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)

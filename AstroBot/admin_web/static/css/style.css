@@ -1,0 +1,9 @@
+body {
+  font-family: Vazir, Tahoma, Arial, sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
