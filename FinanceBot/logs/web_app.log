@@ -1,0 +1,8 @@
+INFO:     Will watch for changes in these directories: ['/workspaces/HamidReza-Nikkhah/FinanceBot']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [48482] using WatchFiles
+INFO:     Started server process [48505]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:42284 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42292 - "GET /favicon.ico HTTP/1.1" 404 Not Found

@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+aiohttp
+aiogram==3.22.1
+Jinja2
+python-multipart
+SQLAlchemy
+aiofiles

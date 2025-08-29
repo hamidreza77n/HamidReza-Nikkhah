@@ -1,0 +1,101 @@
+├── .env
+├── README.md
+├── backend
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-312.pyc
+│   │   └── config.cpython-312.pyc
+│   ├── api
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   └── __init__.cpython-312.pyc
+│   │   ├── prices.py
+│   │   └── transactions.py
+│   ├── config.py
+│   ├── crud
+│   │   ├── __init__.py
+│   │   └── transactions.py
+│   ├── database.py
+│   ├── dp
+│   │   ├── __init__.py
+│   │   └── database.py
+│   ├── main.py
+│   ├── models
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   └── __init__.cpython-312.pyc
+│   │   └── models.py
+│   ├── schemas
+│   │   ├── __init__.py
+│   │   └── schemas.py
+│   ├── services
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-312.pyc
+│   │   │   ├── http_client.cpython-312.pyc
+│   │   │   ├── investments.cpython-312.pyc
+│   │   │   ├── prices.cpython-312.pyc
+│   │   │   └── transactions.cpython-312.pyc
+│   │   ├── http_client.py
+│   │   ├── investments.py
+│   │   ├── prices.py
+│   │   └── transactions.py
+│   ├── static
+│   │   └── uploads
+│   │       └── receipts
+│   └── templates
+│       └── dashboard.html
+├── bot
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-312.pyc
+│   │   └── main.cpython-312.pyc
+│   ├── client.py
+│   ├── handlers
+│   │   ├── __init__.py
+│   │   ├── investments.py
+│   │   ├── statrt.py
+│   │   └── transactions.py
+│   ├── keyboards
+│   │   ├── __init__.py
+│   │   └── main_menu.py
+│   ├── main.py
+│   ├── routers
+│   │   ├── __init__.py
+│   │   ├── transactions.py
+│   │   └── user.py
+│   └── states
+│       └── __init__.py
+├── database
+│   ├── __init__.py
+│   └── migrations
+│       └── __init__.py
+├── logs
+│   ├── telegram_bot.log
+│   └── web_app.log
+├── main.py
+├── modules
+│   ├── __init__.py
+│   ├── investment
+│   │   └── __init__.py
+│   └── market_data
+│       └── __init__.py
+├── requirements.txt
+├── tests
+│   └── __init__.py
+├── utils
+│   └── __init__.py
+└── web_app
+    ├── __init__.py
+    ├── __pycache__
+    │   ├── __init__.cpython-312.pyc
+    │   └── main.cpython-312.pyc
+    ├── backend
+    │   └── __init__.py
+    ├── frontend
+    │   ├── __init__.py
+    │   ├── static
+    │   │   └── style.css
+    │   └── templates
+    │       └── dashboard.html
+    └── main.py

@@ -1,0 +1,45 @@
+# bot/client.py
+import aiohttp
+import os
+
+BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
+API_KEY = os.getenv("API_KEY", "Bv5S3LchsVyjETfmAvvnrAzdBpqlMlvL")
+
+DEFAULT_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/127.0.0.1 Safari/537.36"
+    ),
+    "Authorization": f"Bearer {API_KEY}"
+}
+
+async def create_transaction_api(user_id: int, type_: str, amount: float, category: str = None, description: str = None, receipt_file_path: str = None):
+    url = f"{BACKEND_URL}/api/transactions/create"
+    # if receipt_file_path provided, send multipart/form-data
+    if receipt_file_path:
+        data = {
+            "user_id": str(user_id),
+            "type": type_,
+            "amount": str(amount),
+            "category": category or "سایر",
+            "description": description or ""
+        }
+        async with aiohttp.ClientSession(headers=DEFAULT_HEADERS) as session:
+            with open(receipt_file_path, "rb") as f:
+                form = aiohttp.FormData()
+                for k, v in data.items():
+                    form.add_field(k, v)
+                form.add_field("receipt", f, filename=os.path.basename(receipt_file_path), content_type="image/jpeg")
+                async with session.post(url, data=form) as resp:
+                    return await resp.json()
+    else:
+        async with aiohttp.ClientSession(headers=DEFAULT_HEADERS) as session:
+            async with session.post(url, data={
+                "user_id": str(user_id),
+                "type": type_,
+                "amount": str(amount),
+                "category": category or "سایر",
+                "description": description or ""
+            }) as resp:
+                return await resp.json()

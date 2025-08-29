@@ -1,0 +1,2 @@
+/workspaces/HamidReza-Nikkhah/.venv/bin/python: Error while finding module specification for 'bot.main' (ModuleNotFoundError: No module named 'bot')
+python: can't open file '/workspaces/HamidReza-Nikkhah/FinanceBot/backend/main.py': [Errno 2] No such file or directory
