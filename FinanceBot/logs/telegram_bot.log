@@ -1,5 +1,0 @@
-INFO:aiogram.dispatcher:Start polling
-INFO:aiogram.dispatcher:Run polling for bot @Finance_HN_Bot id=8280817462 - 'FinanceBot'
-INFO:aiogram.event:Update id=268080560 is handled. Duration 588 ms by bot id=8280817462
-INFO:aiogram.event:Update id=268080561 is not handled. Duration 0 ms by bot id=8280817462
-INFO:aiogram.event:Update id=268080562 is handled. Duration 242 ms by bot id=8280817462
